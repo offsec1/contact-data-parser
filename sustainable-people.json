@@ -1,0 +1,49 @@
+{
+    "next_marker": "Christian Rühlmann",
+    "results": [
+      {
+        "id": "FOO1337",
+        "team_id": "1337FOO",
+        "name": "adrian",
+        "deleted": false,
+        "color": "902d59",
+        "real_name": "Adrian Smith",
+        "tz": "Europe/Amsterdam",
+        "tz_label": "Central European Time",
+        "tz_offset": 3600,
+        "profile": {
+          "title": "Founder ",
+          "phone": "",
+          "skype": "",
+          "real_name": "Adrian Smith",
+          "real_name_normalized": "Adrian Smith",
+          "display_name": "Adrian Smith",
+          "display_name_normalized": "Adrian Smith",
+          "fields": {},
+          "status_text": "",
+          "status_emoji": "",
+          "status_emoji_display_info": [],
+          "status_expiration": 0,
+          "avatar_hash": "0x0010",
+          "image_original": "",
+          "is_custom_image": true,
+          "email": "adrian@email.com",
+          "first_name": "Adrian",
+          "last_name": "Beissel",
+          "status_text_canonical": "",
+          "team": "1337Foo"
+        },
+        "is_admin": false,
+        "is_owner": false,
+        "is_primary_owner": false,
+        "is_restricted": false,
+        "is_ultra_restricted": false,
+        "is_bot": false,
+        "is_app_user": false,
+        "updated": 1643570934,
+        "is_email_confirmed": true,
+        "who_can_share_contact_card": "EVERYONE",
+        "presence": "active"
+      }
+    ]
+}
