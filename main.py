@@ -6,7 +6,7 @@ def readJsonFile():
     # Instantiates a client
     datastore_client = datastore.Client()
 
-    with open("sustainable-people.json", "r") as read_file:
+    with open("sustainable-people-2.json", "r") as read_file:
         data = json.load(read_file)
         
         for c in data["results"]:
@@ -21,15 +21,24 @@ def readJsonFile():
                 
                 # # Prepares the new entity
                 contact = datastore.Entity(key=contact_key)
-                contact["name"] = c["name"]
-                contact["real_name"] = c["real_name"]
-                contact["team_id"] = c["team_id"]
-                contact["time_zone"] = c["tz_label"]
-                contact["title"] = c["profile"]["title"]
-                # contact["image_original"] = c["profile"]["image_original"]
-                contact["email"] = c["profile"]["email"]
-                contact["first_name"] = c["profile"]["first_name"]
-                contact["last_name"] = c["profile"]["last_name"]
+                if "name" in c:
+                	contact["name"] = c["name"]
+                if "real_name" in c:
+                	contact["real_name"] = c["real_name"]
+                if "team_id" in c:
+                	contact["team_id"] = c["team_id"]
+                if "time_zone" in c:
+                	contact["time_zone"] = c["tz_label"]
+                if "title" in c["profile"]:
+                	contact["title"] = c["profile"]["title"]
+                if "image_original" in c["profile"]:
+                	contact["image_original"] = c["profile"]["image_original"]
+                if "email" in c["profile"]:
+                	contact["email"] = c["profile"]["email"]
+                if "first_name" in c["profile"]:
+                	contact["first_name"] = c["profile"]["first_name"]
+                if "last_name" in c["profile"]:
+                	contact["last_name"] = c["profile"]["last_name"]
 
                 # Saves the entity
                 datastore_client.put(contact)
